@@ -1,9 +1,5 @@
 # ReverseLinkedList
 
-Certainly! I'll expand the README.md to include information about applications of reversing a linked list. Here's an updated version:
-
-## Reverse Linked List
-
 This Python script implements a solution to reverse a singly linked list. It's designed to work with HackerRank's environment and includes the necessary boilerplate code for input/output handling.
 
 ## Problem Description
@@ -87,7 +83,3 @@ class SinglyLinkedListNode:
 - Time Complexity: O(n), where n is the number of nodes in the linked list
 - Space Complexity: O(1), as the reversal is done in-place
 
-This solution efficiently reverses the linked list by manipulating the next pointers of each node, requiring only a single pass through the list.
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/27953146/06257565-6031-4342-8773-8966934ab78a/ReverseLinkedList.py
