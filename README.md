@@ -1,14 +1,51 @@
 # ReverseLinkedList
 
-This Python script implements a solution to reverse a singly linked list. It's designed to work with HackerRank's environment and includes the necessary boilerplate code for input/output handling.
+This Python program reverses a singly linked list in-place. Given a head pointer of a linked list, it changes each node's `next` pointer to reverse the order of the nodes.
 
-## Problem Description
+## Problem
 
-Given the head of a singly linked list, the task is to reverse the list in-place and return the new head. The input list may be empty (null head).
+Reverse a singly linked list given the pointer to its head node. The head pointer can be `null`, indicating an empty list.
 
-**Example:**
-- Input: 1 → 2 → 3 → NULL
-- Output: 3 → 2 → 1 → NULL
+### Example
+- **Input**: `1 → 2 → 3 → NULL`
+- **Output**: `3 → 2 → 1 → NULL`
+
+## Solution
+
+The `reverse` function accepts a linked list's head node and reverses the list in-place by manipulating the `next` pointers.
+
+### Approach
+1. Initialize three pointers: `prev` (set to `None`), `current` (starting at the head), and `next_node` (to store the next node).
+2. Traverse the linked list:
+   - Store the next node in `next_node`.
+   - Reverse `current.next` to point to `prev`.
+   - Move `prev` and `current` one step forward.
+3. Return `prev` as the new head of the reversed list.
+
+### Complexity
+- **Time**: O(n), where n is the number of nodes (one pass through the list).
+- **Space**: O(1), only a constant amount of space is used.
+
+## File Structure
+
+- **Classes**:
+  - `SinglyLinkedListNode`: Defines a node in the linked list.
+  - `SinglyLinkedList`: Manages the list and allows node insertion.
+- **Functions**:
+  - `reverse`: Reverses the linked list.
+  - `print_singly_linked_list`: Outputs list elements.
+
+## Input/Output
+
+### Input Format
+1. An integer `t` for the number of test cases.
+2. For each test case:
+   - An integer `n`, the number of elements.
+   - `n` integers representing the node values.
+
+### Sample
+- **Input**:
+
 
 ## Function Description
 
@@ -46,40 +83,5 @@ Reversing a linked list is a fundamental operation with several practical applic
 
 7. **Interview and Learning**: Reversing a linked list is a classic problem in computer science education and technical interviews, helping to assess understanding of data structures and pointer manipulation.
 
-## Input Format
 
-1. The first line contains an integer `t`, the number of test cases.
-2. For each test case:
-   - The first line contains an integer `n`, the number of elements in the linked list.
-   - The next `n` lines each contain an integer, representing the data values of the list elements.
-
-## Constraints
-
-- 1 ≤ t ≤ 10
-- 1 ≤ n ≤ 1000
-- 1 ≤ list[i] ≤ 1000, where list[i] is the i-th element in the list
-
-## Usage
-
-This script is designed to run in HackerRank's environment. To use it locally:
-
-1. Ensure you have Python 3 installed.
-2. Modify the input method to accept user input or read from a file.
-3. Change the output method to print to console or write to a file.
-
-## Data Structure
-
-The linked list is implemented using the `SinglyLinkedListNode` class:
-
-```python
-class SinglyLinkedListNode:
-    def __init__(self, node_data):
-        self.data = node_data
-        self.next = None
-```
-
-## Time and Space Complexity
-
-- Time Complexity: O(n), where n is the number of nodes in the linked list
-- Space Complexity: O(1), as the reversal is done in-place
 
